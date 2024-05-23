@@ -28,3 +28,4 @@ ln -sf ops.fw $TARGET_DIR/usr/share/fwup/revert.fw
 
 # Copy the fwup includes to the images dir
 cp -rf $NERVES_DEFCONFIG_DIR/fwup_include $BINARIES_DIR
+cp $NERVES_DEFCONFIG_DIR/images/* $BINARIES_DIR
