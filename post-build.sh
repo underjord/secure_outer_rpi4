@@ -3,21 +3,21 @@
 set -e
 
 # replace DRI libs with symlinks to save space
-function slim_down_dri_libs() {
-    pushd $STAGING_DIR/usr/lib/dri/
+# function slim_down_dri_libs() {
+#     pushd $STAGING_DIR/usr/lib/dri/
 
-    for f in *.so; do
-        if [[ "$f" != "v3d_dri.so" ]]; then
-            rm "$f"
-            ln -s v3d_dri.so "$f"
-        fi
-    done
+#     for f in *.so; do
+#         if [[ "$f" != "v3d_dri.so" ]]; then
+#             rm "$f"
+#             ln -s v3d_dri.so "$f"
+#         fi
+#     done
 
-    popd
-}
+#     popd
+# }
 
 
-slim_down_dri_libs
+#slim_down_dri_libs
 
 # Create the fwup ops script to handling MicroSD/eMMC operations at runtime
 # NOTE: revert.fw is the previous, more limited version of this. ops.fw is
